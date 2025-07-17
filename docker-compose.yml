@@ -9,8 +9,8 @@ services:
     ports:
       - "11888:11888"  # Main application port
     volumes:
-      - /home/long/usb/media/music:/music:ro  # Read-only mount of music directory
-      - /home/long/usb/media/trackly/data:/data  # Persistent storage directory
+      - /mnt/ssd/media/music:/music:ro  # Read-only mount of music directory
+      - /home/long/docker/trackly/data:/data  # Persistent storage directory
     environment:
       - UPDATE_INTERVAL=0 0 * * *  # Set this to your desired cron schedule
       - DISCORD_WEBHOOK=https://discord.com/api/webhooks/dummy # Dummy webhook
