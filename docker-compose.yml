@@ -16,6 +16,8 @@ services:
       - DISCORD_WEBHOOK=https://discord.com/api/webhooks/dummy # Dummy webhook
       - NOTIFY_ON_SCAN=false  # Set to receive notifications for each scan completion
       - DISCORD_NOTIFY=false  # Set to false to disable discord notifications during scan
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
     restart: unless-stopped
     container_name: trackly-test
     healthcheck:
